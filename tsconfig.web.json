@@ -1,0 +1,23 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src",
+    "types/**/*.d.ts",
+    "src/mock/**/*.ts",
+    "electron/preload/*.d.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "types": [
+    "@intlify/unplugin-vue-i18n/types",
+    "vite/client",
+    "element-plus/global",
+    "@types/qrcode",
+    "vite-plugin-svg-icons/client"
+  ]
+}
